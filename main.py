@@ -6,10 +6,10 @@ window.title("Units Converter Program")
 window.minsize(width=500, height=300)
 
 label = Label(text="Enter miles here")
-label.pack()
+label.grid(column=0, row=0)
 
-input = Entry()
-input.pack()
+input = Entry(width=10)
+input.grid(column=3, row=2)
 
 
 def converter():
@@ -19,7 +19,10 @@ def converter():
 
 
 button = Button(text="Convert", command=converter)
-button.pack()
+button.grid(column=1, row=1)
+
+new_botton = Button(text="New Button")
+new_botton.grid(column=2, row=0)
 
 window.mainloop()
 
